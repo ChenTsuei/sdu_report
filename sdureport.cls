@@ -9,6 +9,7 @@
 \newcommand*\sdu@tokens@experimentalTopics{}
 \newcommand*\sdu@tokens@experimentalHours{}
 \newcommand*\sdu@tokens@date{}
+\newcommand*\sdu@tokens@email{}
 
 %% Loading Class
 \LoadClass[a4paper,12pt]{article}
@@ -67,37 +68,38 @@
 	framexleftmargin=2em,
 	breaklines = true,
 	breakatwhitespace = true,
+	showstringspaces=false,
 } 
 %% ----------------------------- define command-----------------------------
 % new document
 \newenvironment{sduDocument}
 {	
 	\begin{center}
-		\huge{山东大学\underline{~\sdu@tokens@college~}学院 \\
-		\underline{~\sdu@tokens@course~}课程实验报告}
+		\large{计算机学院 \underline{~\sdu@tokens@course~}课程实验报告}
 	\end{center}
 	\begin{framed}
 	\AddToShipoutPictureBG*{%
 		\setlength{\unitlength}{1mm}
 %		\put( 17, -45.6){\line(1,0){176}} % 上横线
-		\put( 20, -51.6){\makebox(0,0)[l]{学号：\sdu@tokens@sdudentId}}
-		\put( 77, -55.6){\line(0,1){10}}
-		\put( 80, -51.6){\makebox(0,0)[l]{姓名：\sdu@tokens@name}}
-		\put( 137, -55.6){\line(0,1){10}}
-		\put( 140, -51.6){\makebox(0,0)[l]{班级：\sdu@tokens@class}}
-		\put( 17, -55.6){\line(1,0){176}} % 下横线
-		\put( 20, -61.6){\makebox(0,0)[l]{实验题目：\sdu@tokens@experimentalTopics}}
-		\put( 17, -65.6){\line(1,0){176}} % 下横线
-		\put( 20, -71.6){\makebox(0,0)[l]{实验学时：\sdu@tokens@experimentalHours}}
-		\put( 77, -75.6){\line(0,1){10}}
-		\put( 80, -71.6){\makebox(0,0)[l]{实验日期：\sdu@tokens@date}}
-		\put( 17, -75.6){\line(1,0){176}} % 下横线
+		\put( 20, -38){\makebox(0,0)[l]{实验题目：\sdu@tokens@experimentalTopics}}
+		\put( 137, -42){\line(0,1){10}}
+		\put( 140, -38){\makebox(0,0)[l]{学号：\sdu@tokens@sdudentId}}
+		\put( 17, -42){\line(1,0){176}} % 下横线
+		
+		\put( 20, -48){\makebox(0,0)[l]{日期：\sdu@tokens@date}}
+		\put( 77, -52){\line(0,1){10}}
+		\put( 80, -48){\makebox(0,0)[l]{班级：\sdu@tokens@class}}
+		\put( 137, -52){\line(0,1){10}}
+		\put( 140, -48){\makebox(0,0)[l]{姓名：\sdu@tokens@name}}
+		\put( 17, -52){\line(1,0){176}} % 下横线
+		
+		\put( 20, -58){\makebox(0,0)[l]{Email：\sdu@tokens@email}}
 	}
-	\vspace{25.2 mm}
+	\vspace{25 mm}
 }
 {
 	\end{framed}
-	\vspace{4 mm}\begin{center}\huge{附录}\end{center}
+	\vspace{4 mm}\begin{center}\large{附录}\end{center}
 }
 %\newcommand\sduAppendix{\vspace{4 mm}\begin{center}\huge{附录}\end{center}}
 
@@ -116,7 +118,7 @@
 	\renewcommand{\sdu@tokens@class}{#1}}
 \newcommand*\sduExperimentalTopics[1]{
 	\renewcommand{\sdu@tokens@experimentalTopics}{#1}}
-\newcommand*\sduExexperimentalHours[1]{
-	\renewcommand{\sdu@tokens@experimentalHours}{#1}}
 \newcommand*\sduDate[1]{
 	\renewcommand{\sdu@tokens@date}{#1}}
+\newcommand*\sduEmail[1]{
+	\renewcommand{\sdu@tokens@email}{#1}}

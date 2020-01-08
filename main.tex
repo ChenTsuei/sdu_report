@@ -10,40 +10,33 @@
 
 % initialize the variable texts
 \sduCollege{计算机科学与技术}
-\sduCourse{机器学习}
-\sduSdudentId{202012345678}
-\sduName{你的姓名}
-\sduClass{你的班级}
-\sduExperimentalTopics{实验题目}
-\sduExexperimentalHours{6h}
-\sduDate{\today}
+\sduCourse{社交媒体与舆情分析}
+\sduSdudentId{201605130115}
+\sduName{崔晨}
+\sduClass{菁英班}
+\sduExperimentalTopics{情感分析}
+\sduDate{2019年11月1日}
+\sduEmail{chentsuei@gmail.com}
 
 \begin{document}
 \begin{sduDocument}	
 
-	\section{硬件环境}
-	\begin{itemize}[leftmargin=1em] 
-		\item Thinkpad T460s(i5 6200U, 16G RAM)
-	\end{itemize}
+	\section{实验方法介绍}
+	
+	词袋模型（英语：Bag-of-words model）是个在自然语言处理和信息检索(IR)下被简化的表达模型。此模型下，一段文本（比如一个句子或是一个文档）可以用一个装着这些词的袋子来表示，这种表示方式不考虑文法以及词的顺序。最近词袋模型也被应用在计算机视觉领域。
 
-	\section{软件环境}
-	\begin{itemize}[leftmargin=1em] 
-		\item MATLAB R2019a
-	\end{itemize}
+	\section{实验过程描述}
 	
-	\section{实验目的}
-	这里写实验目的
-	\section{实验记录}
-	段落	段落	段落	段落	段落	段落
-	段落	
+	\subsection{数据处理}
 	
+	分词、构造词表...
 	
-
-	段落	段落
-	\subsection{二级标题}
-	\subsubsection{三级标题}
+	\subsection{模型训练}
 	
-	有序列表		
+	分词、构造词表...
+	
+	\section{结论分析}
+	
 	\begin{enumerate}
 		\item 迭代次数：1868
 		\item $\theta$：[-0.0566, 1.4720, 1.5706]
@@ -51,7 +44,7 @@
 		\item 见：图\ref{b1}
 		\item 此学生不被录取的概率：0.6680
 	\end{enumerate}
-
+	
 	\begin{figure}[H]
 		\subfigure[Loss 变化曲线]{
 			\label{L1}
@@ -62,26 +55,27 @@
 		\caption{梯度下降法}
 	\end{figure}
 	\begin{figure}[H]
-	\subfigure[Loss 变化曲线]{
-		\label{L2}
-		\includegraphics[width=0.45\textwidth]{image/L2.png}}
-	\subfigure[Decision Boundary]{
-		\label{b2}
-		\includegraphics[width=0.45\textwidth]{image/b2.png}}
-	\caption{牛顿法}
+		\subfigure[Loss 变化曲线]{
+			\label{L2}
+			\includegraphics[width=0.45\textwidth]{image/L2.png}}
+		\subfigure[Decision Boundary]{
+			\label{b2}
+			\includegraphics[width=0.45\textwidth]{image/b2.png}}
+		\caption{牛顿法}
 	\end{figure}
+	
+	实验结果显示...
+	
+	\section{结论}
+	
+	基于朴素贝叶斯的方法...
+	
 
 \end{sduDocument}
 
-\begin{lstlisting}[language=matlab]
-x = load("data2/ex2x.dat");
-y = load("data2/ex2y.dat");
-n = length(x);
-x = [ones(n, 1), x];
-stds = std(x);
-mu = mean(x);
-x(:, 2) = (x(:, 2) - mu(2)) ./ stds(2);
-x(:, 3) = (x(:, 3) - mu(3)) ./ stds(3);
+\begin{lstlisting}[language=python]
+print('Hello World!')
+eval(input())
 \end{lstlisting}
 
 \end{document}
